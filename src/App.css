@@ -17,11 +17,11 @@ tr {
   justify-content: space-between;
 }
 
-.Song tr:hover {
+/* .Song tr:hover {
   cursor: pointer;
   background-color: white;
   color: black;
-}
+} */
 
 th {
   font-weight: normal;
@@ -41,6 +41,6 @@ input {
   opacity: .90;
 }
 
-#submit {
+#submit, #delete {
   width: auto;
 }

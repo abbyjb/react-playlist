@@ -1,30 +1,17 @@
 import React, { Component } from 'react';
 
 class Song extends Component {
-
-  constructor() {
-    super();
-    this.state = {
-      selectedSong: {}
-    };
-  };
-
-  handleClick(){
-    let selection = {
-      title: this.props.title,
-      artist: this.props.artist,
-      album: this.props.album
-    };
-    this.setState({selectedSong: selection});
-    
+  deleteSong(id){
+    this.props.onDelete(id);
   }
   render() {
     return (
       <div className="Song">
-        <tr onClick={this.handleClick.bind(this)}>
+        <tr>
           <td id="title">{this.props.title}</td>
           <td id="artist">{this.props.artist}</td>
           <td id="album">{this.props.album}</td>
+          <td><input id="delete" type="button" value="Delete" onClick={this.deleteSong.bind(this, this.props.id)}/></td>
         </tr>
       </div>
     );

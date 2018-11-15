@@ -3,12 +3,15 @@ import Song from './Song';
 
 
 class Playlist extends Component {
-  
+  deleteSong(id) {
+    this.props.onDelete(id);
+  }
+
   render() {
     let songs;
     if(this.props.songs) {
       songs = this.props.songs.map(song =>{
-        return ( <Song title={song.title} artist={song.artist} album={song.album} />);
+        return (<Song onDelete={this.deleteSong.bind(this)} id={song.id} title={song.title} artist={song.artist} album={song.album} />);
       });
     }
     return ( 
@@ -19,6 +22,7 @@ class Playlist extends Component {
                 <th>Title</th>
                 <th>Artist</th>
                 <th>Album</th>
+                <th></th>
             </tr>
             {songs}
           </table>
