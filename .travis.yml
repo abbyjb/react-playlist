@@ -1,12 +1,18 @@
 language: node_js
 node_js:
-  - lts/*
+- lts/*
 cache:
   directories:
-    - "node_modules"
+  - node_modules
 script:
-  - npm test
-  - npm run build
+- npm test
+- npm run build
 git:
   depth: false
   quiet: true
+deploy:
+  provider: heroku
+  api_key:
+    secure: PJ6n1ttlPEs/WmwbrLPALRuto/eeYSf2rutS0rWBU4+GlAJ21Ud6ndpVbmKmFWPnfqCCC5Qn2CmqOZzy7CPuvcBx4wZXRTZ1nKVpkk+eRJD9SAP9hWhhODpDe22itsJGYaZbuaLe4AVUwCxI4BsLSuefnZRGNzZBW8RA2dDAGFGtV1d0f9EBdhRo7MoN3REqC8IBP4xGywzt2IEFn8nqawcrOktRoh8/FSvsqlONcr5KJp4aNaU2+8aCbE06i0tIxxViMRKe1Pp6F05OzAQZPHkj1DV/oCv8Gwyo8am0bnrjY+TSM0IZ+gEVv/+vnxaxTvD7N1DxqJ85MOASZ9mKrzvqx9QSXrOQq4aaLvOXdFTEbHCzki5CY5AjroSy2kIJ0prL/HTVDNik9LBr3ND+HkKXcjIXh9yugJlwtaBZLO8QrLPDdBz1mUrXEw6unYlUBKupRmq/iUR5DRBlzqlZCozjBWirnNWn/aAiNDp9LDQALlhdL+/w4HYjDpaCrzJmS3iD/RK89UkrUeCmjxrolWmVZMVDfNacXjDwLt5omRqVmitM9PyFxTn7sEjQ3koJITiZMvPu864kRgKtFVu6BTbrKmefQmRQ+h4cVaE2MeBnSO3DkvbTJbmFcPeDdNm8Z3Ype0kbAwnvgUJGzKXna8sxJb67OG70f8T1G+n04R4=
+  app: react-create-playlist
+  on: master
