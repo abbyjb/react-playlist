@@ -4,7 +4,7 @@ export default function songs(state = [], action) {
       return [
         ...state,
         {
-          id: action.id,
+          id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
           title: action.title,
           artist: action.artist,
           album: action.album
