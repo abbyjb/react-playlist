@@ -32,8 +32,6 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "jest": "23.6.0",
-    "react-test-renderer": "^16.9.0",
-    "redux-devtools": "^3.5.0",
-    "redux-immutable-state-invariant": "2.1.0"
+    "react-test-renderer": "^16.9.0"
   }
 }
