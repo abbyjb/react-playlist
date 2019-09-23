@@ -25,14 +25,14 @@ describe("Song Component", () => {
 
   it("should display song information", () => {
     const { props, wrapper } = setup();
-    expect(wrapper.find("#title").text()).toEqual(props.title);
-    expect(wrapper.find("#artist").text()).toEqual(props.artist);
-    expect(wrapper.find("#album").text()).toEqual(props.album);
+    expect(wrapper.find(".title").text()).toEqual(props.title);
+    expect(wrapper.find(".artist").text()).toEqual(props.artist);
+    expect(wrapper.find(".album").text()).toEqual(props.album);
   });
 
-  it("should call on click when input is clicked", () => {
+  it("should call the onClick function when the delte button is clicked", () => {
     const { props, wrapper } = setup();
-    const input = wrapper.find("#delete");
+    const input = wrapper.find("button");
 
     input.props().onClick();
 
