@@ -2,35 +2,25 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const path = require("path");
 module.exports = {
+  mode: 'production',
   entry: './src/index.js',
-  devtool: "inline-source-map",
+  devtool: "source-map",
   node: { fs: "empty" },
   output: {
-    filename: "main.js",
+    filename: "static/[name].[hash].js",
     path: path.resolve(__dirname, 'dist'),
-  },
-  resolve: {
-    alias: {
-      "react": path.resolve('./node_modules/react'),
-      "react-dom": path.resolve('./node_modules/react-dom')
-    }
+    publicPath: "/"
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader", 
-        }
+        use: ["babel-loader"]
       },
       {
         test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader"
-          }
-        ]
+        use: [ "html-loader"]
       },
       {
         test: /\.(scss|sass)$/,
@@ -40,8 +30,7 @@ module.exports = {
   }, 
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html"
+      template: "./src/index.html"
     })
   ]
 }

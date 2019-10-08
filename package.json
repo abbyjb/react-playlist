@@ -15,8 +15,8 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production",
+    "start": "webpack-dev-server --config webpack.config.dev.js",
+    "build": "webpack -p --config webpack.config.prod.js",
     "test": "jest --verbose",
     "test:watch": "npm test -- --watch",
     "eject": "react-scripts eject"
