@@ -6,6 +6,7 @@
     "@babel/runtime": "^7.6.2",
     "cross-fetch": "^3.0.4",
     "dotenv": "^8.1.0",
+    "dotenv-webpack": "^1.7.0",
     "react": "16.8.4",
     "react-dom": "16.8.4",
     "react-redux": "6.0.1",
@@ -15,8 +16,8 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.dev.js",
-    "build": "webpack -p --config webpack.config.prod.js",
+    "start": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
     "test": "jest --verbose",
     "test:watch": "npm test -- --watch",
     "eject": "react-scripts eject"
@@ -51,6 +52,7 @@
     "webpack": "^4.41.0",
     "webpack-bundle-analyzer": "^3.5.2",
     "webpack-cli": "^3.3.9",
-    "webpack-dev-server": "^3.8.2"
+    "webpack-dev-server": "^3.8.2",
+    "webpack-merge": "^4.2.2"
   }
 }

@@ -1,14 +1,13 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const path = require("path");
+const Dotenv = require('dotenv-webpack');
 module.exports = {
-  mode: 'production',
-  entry: './src/index.js',
-  devtool: "source-map",
+  entry: "./src/index.js",
   node: { fs: "empty" },
   output: {
-    filename: "static/[name].[hash].js",
-    path: path.resolve(__dirname, 'dist'),
+    filename: "[name].[hash].js",
+    path: path.resolve(__dirname, "dist"),
     publicPath: "/"
   },
   module: {
@@ -20,17 +19,18 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        use: [ "html-loader"]
+        use: ["html-loader"]
       },
       {
         test: /\.(scss|sass)$/,
         use: ["style-loader", "css-loader", "sass-loader"]
       }
     ]
-  }, 
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html"
-    })
+    }),
+    new Dotenv()
   ]
-}
+};
