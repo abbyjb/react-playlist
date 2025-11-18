@@ -1,4 +1,4 @@
-import dotenv from 'dotenv-flow';
+import dotenv from "dotenv";
 import React from "react";
 import { render } from "react-dom";
 import "./index.css";
