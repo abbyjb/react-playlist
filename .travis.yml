@@ -1,9 +1,9 @@
 language: node_js
 node_js:
 - lts/*
-# cache:
-#   directories:
-#   - node_modules
+cache:
+  directories:
+  - node_modules
 script:
 - npm test
 - npm run build
@@ -15,5 +15,6 @@ deploy:
   api_key:
     secure: LZ8aKwcuXmkFsrUpdWePOdjTsTFNquZGZQotjh73n0FFqVACDocs8lCTRw0HBwBt+QuZkUCbCSYhMQ19nbTI1qBLmoFc8UY97EWsasnO4U/+G4ba5xoR7dGYj109OG2yOTUghMhMBnJvqTQHEvGeNV8eSI1CTvL+2Z2hdHIyx3D4HY9eNGP57E1uxtwxTKtALnaTOk3mbPYTUAVbM8KfrloieZ/HIHGZ5s7aMePyZ4Ir2VVULaI6fyhgLalAIooWwQmtBSkNMc9iFkG/ZU3MrGRH7Vb17/qfU+obZxZMm8MvdkBYxNAa+yAVvvloeWaBGcW8isfLHbI6VbUkHdpUbfjd4gHchUBsAVkYv7d04i0nqfHKiX4LbbvZq1iy81q6wLjgxXuLZzNrgomBgvxmhJcUT+hNhEXreSYoGHZB6rlw7jFyrDgyLXnHagRIpji1katynC7Oz2IOh2yYWwmkhXtN/npNfQ/6A+gEj2uLvDjQm6MdTplNdzqmyMqgiNsRy0U2NPMWFt5taAXr4JzJ4Au5jl3gfn3HkwVFftmPTfipNXyGMJwYBFVhruoXktINeQXBMsSBEV72f0uDNvkqxPnglSR+Cq5iWCBhzLNaXhPUifAn4Psz8WUfW1T4HszW9jTQmoqdT3aOVa4IXjtwO64p+qpl+O4PauqwGNm53B8=
   app: react-create-playlist
-  on: master
+  on: 
+    repo: abashore97/react-playlist
   
