@@ -19,7 +19,7 @@ export function saveSong(song) {
   .catch(error => console.error("API call failed. " + error));
 }
 
-export async function removeSong(id) {
+export function removeSong(id) {
   return fetch(baseUrl + "/" + id, {method: 'DELETE'})
   .then(response => { return response.json(); } )
   .catch(error => console.error("API call failed. " + error));
