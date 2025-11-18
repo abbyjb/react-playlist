@@ -1,8 +1,7 @@
-let nextSongId = 0;
+
 export function addSong(title, artist, album) {
   return {
     type: "ADD_SONG",
-    id: nextSongId++,
     title,
     artist,
     album
