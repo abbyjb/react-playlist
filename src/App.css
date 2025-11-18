@@ -17,12 +17,6 @@ tr {
   justify-content: space-between;
 }
 
-/* .Song tr:hover {
-  cursor: pointer;
-  background-color: white;
-  color: black;
-} */
-
 th {
   font-weight: normal;
   opacity: .50;
