@@ -2,28 +2,29 @@ import * as actions from "./songs";
 
 describe("song actions", () => {
   it("should create the addSong action", () => {
-    const title = "Test Song";
-    const artist = "Test Artist";
-    const album = "Test Album";
+    const newSong = {
+      title: "test song",
+      artist: "test artist",
+      album: "test album"
+    }
 
     const expectedAction = {
-      type: "ADD_SONG",
-      title: title,
-      artist: artist,
-      album: album
+      type: "ADD_SONG_SUCCESS",
+      song: newSong
     };
 
-    expect(actions.addSong(title, artist, album)).toEqual(expectedAction);
+    expect(actions.addSongSuccess(newSong)).toEqual(expectedAction);
   });
 
   it("should create the deleteSong action", () => {
     const id = id;
 
     const expectedAction = {
-      type: "DELETE_SONG",
+      type: "DELETE_SONG_SUCCESS",
       id: id
     };
 
-    expect(actions.deleteSong(id)).toEqual(expectedAction);
+
+    expect(actions.deleteSongSuccess(id)).toEqual(expectedAction);
   });
 });

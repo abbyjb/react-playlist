@@ -7,7 +7,7 @@ const Playlist = ({ playlistName, songs, deleteSong }) => (
       <div className="playlist-name col-lg-4">{playlistName}</div>
     </div>
     {songs.map(song => (
-      <Song key={song.id} {...song} onClick={() => deleteSong(song.id)}></Song>
+      <Song key={song.id} {...song} onClick={() => deleteSong(song)}></Song>
     ))}
   </div>
 );

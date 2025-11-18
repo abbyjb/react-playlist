@@ -31,19 +31,21 @@ describe("songs reducer", () => {
   it("should modify state correctly when adding a song", () => {
     let nextSongId = 1;
     const addSongAction = {
-      type: "ADD_SONG",
-      title: "Shelf Life",
-      artist: "Dance Gavin Dance",
-      album: "Artifical Selection"
+      type: "ADD_SONG_SUCCESS",
+      song: {
+        title: "Shelf Life",
+        artist: "Dance Gavin Dance",
+        album: "Artifical Selection"
+      }
     };
 
     const newState = [
       ...state ,
       {
         id: 2,
-        title: addSongAction.title,
-        artist: addSongAction.artist,
-        album: addSongAction.album
+        title: addSongAction.song.title,
+        artist: addSongAction.song.artist,
+        album: addSongAction.song.album
       }
     ];
 
@@ -52,7 +54,7 @@ describe("songs reducer", () => {
 
   it("should modify state correctly when deleting a song", () => {
     const deleteSongAction = {
-      type: "DELETE_SONG",
+      type: "DELETE_SONG_SUCCESS",
       id: 0
     };
 
