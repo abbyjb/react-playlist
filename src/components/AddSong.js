@@ -13,6 +13,7 @@ class AddSong extends Component {
       if(this.refs.title.value && this.refs.artist.value && this.refs.album.value) {
         this.setState({
             newProject: {
+                id: this.props.numSongs + 1,
                 title: this.refs.title.value,
                 artist: this.refs.artist.value,
                 album: this.refs.album.value
