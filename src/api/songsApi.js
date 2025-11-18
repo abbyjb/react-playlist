@@ -1,6 +1,7 @@
 
 import fetch from 'cross-fetch';
 const baseUrl = process.env.REACT_APP_BASE_API_URL + "/songs";
+console.log(baseUrl)
 
 export function loadSongs() {
   return fetch(baseUrl, {headers: {"content-type": "application/json"}})
