@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./App.scss";
 import VisiblePlaylist from "./containers/VisiblePlaylist";
 import AddSong from "./containers/AddSong";
 

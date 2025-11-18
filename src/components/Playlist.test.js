@@ -32,7 +32,7 @@ describe("Playlist Component", () => {
   it("should render the current songs", () => {
     const {props, wrapper} = setup();
 
-    expect(wrapper.find('h1').text()).toEqual(props.playlistName);
+    expect(wrapper.find('.playlist-name').text()).toEqual(props.playlistName);
     expect(wrapper.find('Song').length).toEqual(1);
     
     const songProps = wrapper.find('Song').props();
